@@ -35,3 +35,26 @@ To resolve this issue:
 [lil-course-url]: https://www.linkedin.com/learning/
 [lil-thumbnail-url]: http://
 
+## Run
+Step 1:
+```
+docker login
+```
+Step 2: 
+```
+docker run -it -d -p 5000:5000 -v ${PWD}:/app/code big-star-collectibles
+```
+Note: 
+1. -it: runs interactive mode for the container to allocate the sudo tty to debug running containers and view logs
+2. -d: runs the container in detach mode to be ran in the background and command prompt will return to host system
+3. -p: maps the port on a host system inside of a container
+4. -v: volume inside a container
+5. PWD: present working directory
+
+Step 3:
+```
+http://localhost:5000
+```
+Copy and paste into your browser to see the website ran on docker.
+
+
